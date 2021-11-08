@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estudiantes",
+  "info": {
+    "name": "Estudiantes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Usuario": {
+      "type": "string"
+    },
+    "Nombres": {
+      "type": "string"
+    },
+    "Contrasenia": {
+      "type": "string"
+    }
+  }
+}

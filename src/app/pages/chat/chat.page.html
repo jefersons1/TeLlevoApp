@@ -1,0 +1,66 @@
+<ion-header>
+  <app-header [pageTitle]="titulo"></app-header>
+</ion-header>
+
+<ion-content color="warning">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title> Usted esta hablando con: </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            
+            <ion-input color="dark" type="text" placeholder="Nombre" [(ngModel)]="conductor.Nombre" disabled>
+              <b>Nombre:</b>
+            </ion-input>
+
+            <ion-input color="dark" type="text" placeholder="Descripcion" [(ngModel)]="conductor.Descripcion" disabled>
+              <b>Descripcion:</b>
+            </ion-input>
+
+            <ion-input color="dark" type="text" placeholder="Edad" [(ngModel)]="conductor.Edad" disabled>
+              <b>Edad:</b> 
+            </ion-input>
+            
+            <ion-input color="dark" type="number" placeholder="Numero telefonico" [(ngModel)]="conductor.NumeroTelefonico" disabled>
+              <b>Numero Telefonico:</b>
+            </ion-input>
+            
+            <ion-input color="dark" type="text" placeholder="Destino" [(ngModel)]="conductor.Destino" disabled>
+              <b>Destino: </b>
+            </ion-input>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+    
+
+</ion-content>
+
+
+
+<ion-card color = "warning" vertical="bottom" horizontal="end" slot="">
+  <ion-item color = "light">
+    <ion-label position="stacked"> <strong>Chat en vivo con el conductor</strong></ion-label>
+
+    
+    <ion-input>
+    
+        <ion-row>
+          <ion-col size-lg offset="180"> 
+            <ion-icon name="pizza-outline" ></ion-icon>
+          </ion-col>
+        </ion-row>
+      
+    </ion-input>
+    
+  </ion-item>
+
+
+</ion-card>

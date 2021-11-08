@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conductores",
+  "info": {
+    "name": "Conductores"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Edad": {
+      "type": "integer"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "NumeroTelefonico": {
+      "type": "biginteger"
+    },
+    "Destino": {
+      "type": "enumeration",
+      "enum": [
+        "DuocPuenteAlto",
+        "DuocApoquindo",
+        "DuocSanJoaquin"
+      ]
+    }
+  }
+}

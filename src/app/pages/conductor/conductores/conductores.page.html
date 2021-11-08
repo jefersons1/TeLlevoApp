@@ -1,0 +1,36 @@
+<ion-header>
+  <app-header [pageTitle]="titulo">
+
+  </app-header>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let conductor of conductores">
+      <ion-card-header>
+        <ion-card-subtitle>Conductor</ion-card-subtitle>
+        <ion-card-title>{{conductor.Nombre}}</ion-card-title>
+      </ion-card-header>
+      <img [src]= "conductor.Imagen && conductor.Imagen.formats.thumbnail.url ? 'http://localhost:1337' + conductor.Imagen.formats.thumbnail.url : 
+      'https://siempreenmedio.files.wordpress.com/2014/04/no_disponible.jpg'  " alt = ''>
+      <ion-card-content>
+        <div>{{conductor.Descripcion}}</div>
+        <div>Numero telefonico: {{conductor.NumeroTelefonico}}</div>
+        <div>Destino: {{conductor.Destino}}</div>
+        <div>
+          <ion-button color= "success" [routerLink] = "['/', 'conductor', 'edit', conductor.id]">Actualizar</ion-button>
+          <ion-button color= "danger" (click) ="eliminarConductor(conductor.id)" >Eliminar</ion-button>
+          <ion-button color= "medium" [routerLink] = "['/', 'chat', 'edit', conductor.id]" >Chatear</ion-button>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+      <ion-fab-button color = "success" routerLink = "/add-conductor">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+
+</ion-content>

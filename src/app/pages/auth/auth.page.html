@@ -1,0 +1,66 @@
+<ion-header>
+  <app-header [pageTitle]="titulo" ></app-header>
+</ion-header>
+
+
+<ion-content color="warning" >
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <ion-card color ="tertiary"> 
+          <ion-card-header  >
+            <ion-card-title class="ion-text-center" color="secondary">
+              Iniciar Sesion
+            </ion-card-title>
+            <ion-card-content >
+              <ion-item color ="tertiary">
+                <ion-label position="floating">Usuario:</ion-label>
+                <ion-input type="text" clearInput [(ngModel)] = "Bienvenida.NombreUsuario"></ion-input>
+              </ion-item>
+              <ion-item color ="tertiary">
+                <ion-label position="floating">Contraseña:</ion-label>
+                <ion-input type="password" clearInput clearInput [(ngModel)] = "credenciales.Contrasenia"></ion-input>
+              </ion-item>
+              <ion-button class="ion-margin-end" routerLink = "/bienvenida" >
+                <ion-icon name="person-add-outline" slot = "start"></ion-icon>
+                INGRESAR
+              </ion-button>
+             
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card color ="tertiary"> 
+          <ion-card-header>
+            <ion-card-content>
+              <div class="ion-text-start">
+                ¿Ha olvidado su contraseña?
+              </div>
+              <ion-button color="warning" class="ion-margin-left" [routerLink]="['/restablecer']">
+                <ion-icon name="lock-closed-outline" slot = "start"></ion-icon>
+                Restablecer
+              </ion-button>
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+
+       
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card *ngFor="let aux of Usuarios">
+    <ion-card-content>
+      <h1>
+        {{aux.Usuario}}
+        {{aux.Contrasenia}}
+      </h1>
+
+      
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

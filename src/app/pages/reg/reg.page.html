@@ -1,0 +1,43 @@
+<ion-header >
+  <app-header [pageTitle]="titulo" ></app-header>
+</ion-header>
+
+<ion-content color="warning" >
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <ion-card color ="tertiary"> 
+          <ion-card-header  >
+            <ion-card-title class="ion-text-center" color="secondary">
+              Registro
+            </ion-card-title>
+            <ion-card-content >
+              <ion-item color ="tertiary">
+                <ion-label position="floating">Nombres:</ion-label>
+                <ion-input type="text" clearInput #Nombres></ion-input>
+              </ion-item>
+              <ion-item color ="tertiary">
+                <ion-label position="floating">Usuario:</ion-label>
+                <ion-input type="text" clearInput #Usuario></ion-input>
+              </ion-item>
+              <ion-item color ="tertiary">
+                <ion-label position="floating">Contraseña:</ion-label>
+                <ion-input type="text" clearInput #Contrasenia></ion-input>
+              </ion-item>
+              
+            </ion-card-content>
+            <ion-button class="ion-margin-top ion-margin-start" (click) = "guardarUsuario(Nombres, Usuario, Contrasenia)">
+              <ion-icon name="person-add-outline" slot = "start"></ion-icon>
+              Registrarse
+            </ion-button>
+            
+          </ion-card-header>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header  >
+  <app-header [pageTitle]="titulo"></app-header>
+</ion-header>
+
+<ion-content color = "warning">
+  
+  <ion-card color = "tertiary" >
+    <ion-card-header>
+      <ion-card-subtitle ></ion-card-subtitle>
+      <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="">
+      <ion-card-title >
+        <ion-label color="light" >BIENVENIDO</ion-label>
+      </ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+    
+      <ion-button expand="block" color="secondary" [routerLink]= "['/add-conductor']">Quiero ser conductor</ion-button>
+      <ion-button expand="block" color="success" [routerLink]= "['/conductores']">Quiero un movil</ion-button>
+      <ion-button expand="block" color="danger" (click) = "Redireccionar()">Cerrar Sesión</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>
